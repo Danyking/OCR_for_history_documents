@@ -11,6 +11,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn import datasets
 from keras.optimizers import SGD
 from keras.utils import np_utils
+from random import shuffle
 import numpy as np
 import argparse
 from numpy import genfromtxt
@@ -30,7 +31,7 @@ args = vars(ap.parse_args())
 # load the raw training data from a csv file into a numpy list
 print("[INFO] loading the training data ...")
 my_data = genfromtxt('train.csv', delimiter=',')
-
+shuffle(my_data)
 # reshape the training dataset from a flat list of 429-dim vectors to
 # 13 x 33 pixel images, argument the data by shifting, then scale the 
 # data to the range [0, 1.0] and construct the training and testing splits
