@@ -1,4 +1,4 @@
-# OCR_for_history_documents
+# OCR for History Documents
 
 This directory contains the source code of the two models we built
 to solve the OCR problem: an SVM model in the "svm.R" file and a CNN
